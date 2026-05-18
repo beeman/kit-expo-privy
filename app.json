@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "web": {
+      "output": "static"
+    },
+    "name": "kit-expo-privy",
+    "slug": "kit-expo-privy",
+    "android": {
+      "package": "com.anonymous.kit_expo_uniwind"
+    },
+    "plugins": ["expo-router"]
+  }
+}
