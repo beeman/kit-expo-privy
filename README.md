@@ -9,6 +9,24 @@ This is an [Expo](https://expo.dev) project pre-configured with [Uniwind](https:
 - [@solana/kit](https://github.com/solana-labs/solana-web3.js)
 - [@wallet-ui/react-native-kit](https://github.com/wallet-ui/wallet-ui)
 
+## Set up Privy
+
+1. Log in or sign up at the [Privy dashboard](https://dashboard.privy.io).
+2. On the [organization overview](https://dashboard.privy.io/organization-overview), click `New app`.
+3. Enter your app name, select `Mobile app`, and click `Create app`.
+4. Save the `App ID`, then click `Close`.
+5. Under `User management` in the sidebar, go to `Authentication`.
+6. In the `External wallets` card, enable `SVM (Solana) wallets`.
+7. Go to `App settings` > `Clients` and save the `Client ID` for the default mobile app client.
+8. Copy `.env.example` to `.env` and set:
+
+   ```bash
+   EXPO_PUBLIC_PRIVY_APP_ID=your-privy-app-id
+   EXPO_PUBLIC_PRIVY_CLIENT_ID=your-privy-client-id
+   ```
+
+Do not put the Privy app secret in `.env`; this Expo app only uses public client-side Privy identifiers.
+
 ## Get started
 
 1. Install dependencies

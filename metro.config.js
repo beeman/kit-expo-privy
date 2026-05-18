@@ -12,4 +12,21 @@ const uniwindConfig = withUniwindConfig(config, {
   dtsFile: './src/uniwind-types.d.ts',
 })
 
+const defaultResolveRequest = uniwindConfig.resolver.resolveRequest
+
+uniwindConfig.resolver.resolveRequest = (context, moduleName, platform) => {
+  if (moduleName === 'jose') {
+    const ctx = {
+      ...context,
+      unstable_conditionNames: ['browser'],
+    }
+
+    return ctx.resolveRequest(ctx, moduleName, platform)
+  }
+
+  return defaultResolveRequest
+    ? defaultResolveRequest(context, moduleName, platform)
+    : context.resolveRequest(context, moduleName, platform)
+}
+
 module.exports = uniwindConfig
