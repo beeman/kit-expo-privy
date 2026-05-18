@@ -6,7 +6,7 @@ import { fromUint8Array, useMobileWallet } from '@wallet-ui/react-native-kit'
 import { getWalletErrorMessage } from './get-wallet-error-message'
 
 const siwsDomain = 'kit-expo-privy'
-const siwsUri = 'acme://privy-login'
+const siwsUri = 'kit-expo-privy://privy-login'
 
 export function usePrivySignInMutation(address: Address) {
   const { generateMessage, login } = useLoginWithSiws()
