@@ -21,7 +21,7 @@ export function WalletFeatureEntry() {
         <View className="self-start rounded-full bg-emerald-400/10 px-3 py-1">
           <Text className="text-xs font-bold uppercase text-emerald-300">Solana MWA</Text>
         </View>
-        <Text className="text-5xl font-extrabold text-white">Privy wallet</Text>
+        <Text className="text-5xl font-extrabold text-white">Privy & MWA</Text>
         <Text className="text-base leading-6 text-zinc-400">
           Connect a mobile wallet, authenticate with Privy, and run common Solana wallet actions.
         </Text>
